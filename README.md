@@ -1,1 +1,1 @@
-# terraform-aws-misfirm
+This repository will be the infrastructure code to build up the basic VPN and VPC for the MIS Solutions AWS account. 
