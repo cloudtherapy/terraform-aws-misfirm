@@ -22,3 +22,11 @@ resource "aws_s3_bucket" "mis-test" {
     Name        = "MISBucketName"
   }
 }
+
+resource "aws_s3_bucket" "mis-test2" {
+  bucket = "misfirm-test-bucket2"
+
+  tags = {
+    Environment = "Production"
+  }
+}
