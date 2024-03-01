@@ -9,7 +9,7 @@ terraform {
 
 # Configure the AWS Provider
 provider "aws" {
-  region = "us-east-1"
+  region     = "us-east-1"
   access_key = var.mis_access_key
   secret_key = var.mis_secret_key
 }
@@ -19,5 +19,6 @@ resource "aws_s3_bucket" "mis-test" {
 
   tags = {
     Environment = "Production"
+    Name        = "MISBucket"
   }
 }
