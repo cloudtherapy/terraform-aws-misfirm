@@ -19,7 +19,6 @@ resource "aws_s3_bucket" "mis-test" {
 
   tags = {
     Environment = "Production"
-    Name        = "MISBucket1"
   }
 }
 
