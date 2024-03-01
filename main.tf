@@ -22,3 +22,10 @@ resource "aws_s3_bucket" "mis-test" {
   }
 }
 
+resource "aws_s3_bucket" "mis-test2" {
+  bucket = "misfirm-test-bucket2"
+
+  tags = {
+    Environment = "Dev"
+  }
+}
