@@ -19,14 +19,7 @@ resource "aws_s3_bucket" "mis-test" {
 
   tags = {
     Environment = "Production"
-    Name        = "MISBucketName"
+    Name        = "MISBucket1"
   }
 }
 
-resource "aws_s3_bucket" "mis-test2" {
-  bucket = "misfirm-test-bucket2"
-
-  tags = {
-    Environment = "Production"
-  }
-}
