@@ -12,7 +12,7 @@ module "mis-test-bucket1" {
   version = "4.1.0"
   bucket  = "mis-test-bucket1"
   tags = {
-    "Environment" = "Prod"
+    "Environment" = "Production"
     "Owner"       = "Carlos"
   }
 
