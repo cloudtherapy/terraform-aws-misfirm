@@ -105,14 +105,14 @@ module "default_security_group" {
       from_port   = -1
       to_port     = -1
       protocol    = -1
-      description = "Azure virtual network"
+      description = "Azure MPN network"
       cidr_blocks = "10.253.0.0/20"
     },
     {
       from_port   = -1
       to_port     = -1
       protocol    = -1
-      description = "AWS Methods network"
+      description = "AWS cetech-shared network"
       cidr_blocks = "10.254.0.0/20"
     }
   ]
