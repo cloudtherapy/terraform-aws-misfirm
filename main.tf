@@ -59,7 +59,7 @@ module "vpn_gateway" {
   tags = {
     Terraform   = "true"
     Environment = "Prod"
-    Name        = "misfirm-to-tierpoint-vpn"
+    Name        = "misfirm-tierpoint-vpn"
   }
 }
 
