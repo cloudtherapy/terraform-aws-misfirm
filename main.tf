@@ -14,6 +14,17 @@ provider "aws" {
   secret_key = var.mis_secret_key
 }
 
+#Create the CETech ansible key pair in new account if it doesn't exist
+module "ansible_key_pair" {
+  source = "terraform-aws-modules/key-pair/aws"
+  version = "~> 2.0.3"
+
+  key_name   = "ansible"
+  public_key = "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCTD8HrwW7d5xvgs0o0dXkyNFdgZwab4G9Ok2Irh7uuk0OOW/U9QyePpfHzDboSsyfSGjwG3qzn6zKncq1vg2YmaR2oOm555T5D3/faGdJ1UJbx5hqiogkfw4hXMreg/u9Ah9CuucDUKwRxQC/MhpVrGb1MAEuDd5ZKPT6QF99ssgno/ibrHdraENMsZu+FxmJZ/Ukmi6ik8eJYRlSvAEZXw2hQIEcEaYejWMnNmE06ys5xjQe30pmV2a/Wxg4NN2MrDFzCssSDARAMak5v0vGkLGTsJYx56NaKLqnOudkKnPkXK/AvvEB26L1F1kaZLyR0jrzjTuKKEuqUJReKf/MV"
+}
+
+
+
 #Create a base VPC for MISFirm Account (255820308257)
 module "vpc" {
   source  = "terraform-aws-modules/vpc/aws"
