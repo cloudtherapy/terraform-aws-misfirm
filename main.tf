@@ -7,7 +7,7 @@ terraform {
   }
 }
 
-# Configure the AWS Provider
+# Configure the AWS Provider for TF
 provider "aws" {
   region     = "us-east-1"
   access_key = var.mis_access_key
